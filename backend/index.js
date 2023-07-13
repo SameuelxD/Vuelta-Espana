@@ -4,6 +4,7 @@ import conectarDB from "./config/config.js";
 import CiclistaRoutes from "./routes/ciclistas.routes.js"
 import EquipoRoutes from "./routes/equipos.routes.js";
 import EtapaRoutes from "./routes/etapas.routes.js";
+import PremioRoutes from "./routes/premio.routes.js";
 import cors from "cors";
 
 const app = express();
@@ -18,6 +19,7 @@ conectarDB();
 app.use("/ciclistas", CiclistaRoutes);
 app.use("/equipo",EquipoRoutes);
 app.use("/etapas", EtapaRoutes);
+app.use("/premios",PremioRoutes)
 
 app.listen(4000, ()=>{
     console.log(`Server corriendo ${PORT}`);
