@@ -40,21 +40,12 @@ const updateCiclista = async (req,res) =>{
         if (req.body.nacionalidad) {
             ciclista.nacionalidad =req.body.nacionalidad;
         }
+        await ciclista.save();
+        res.send(ciclista);
     } catch (error) {
-        
+        console.log(error);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 export {

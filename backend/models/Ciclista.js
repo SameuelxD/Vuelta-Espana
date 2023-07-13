@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const ciclistaSchema = mongoose.Schema(
     {
-        nombre: {
+    nombre: {
         type: String,
         required: true,
         trim: true
@@ -21,12 +21,7 @@ const ciclistaSchema = mongoose.Schema(
         type: String,
         required : true,
         trim : true
-    },
-     logros : {
-        type: String,
-        required : true,
-        trim : true
-    },
+    }
     },
     {
         timestamps: true,
